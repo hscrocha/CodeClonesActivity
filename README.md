@@ -38,6 +38,8 @@ Questions:
 
 Try to change other parameters of DuDe and see how that affects the detected clones. The minimum size of the duplication chain (min SDC) is the threshold based on which we filter the insignificant results. The maximum line biax (max LB) is the maximum length of the gap that is allowed to link two consecutive exact chunks within a duplication chain. The minimum size of the exact chunk (min SEC) is the smallest size for a exact chain allowed to be part of a duplication chain.
 
+Main lesson: The configuration of your clone detection tool can greatly affect the number of detected clones. You must customize those parameters to better suit your project.
+
 ## Task 4: 
 
 
