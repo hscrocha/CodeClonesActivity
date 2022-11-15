@@ -1,6 +1,8 @@
 # Code Clones: Hands-on Lecture
 
-This repository presents a practical lecture on using Code Clones Tools.
+This repository presents a practical lecture on using Code Clones Tools. 
+
+Just clone this repo as a zip file, and unpack the zip to have access to the source code inside. 
 
 ## Task 1: Manual Code Clone Detection (10 min)
 
