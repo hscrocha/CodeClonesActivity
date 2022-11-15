@@ -4,7 +4,7 @@ This repository presents a practical lecture on using Code Clones Tools.
 
 ## Task 1: Manual Code Clone Detection (10 min)
 
-We start with the ultimate clone detector: the developer. Look at the folder ```ShortCodeExample''' and open the Java Class inside of it on your favorite IDE. Try to find pieces of code that seem to be close related for about 10 minutes. 
+We start with the ultimate clone detector: the developer. Look at the folder `ShortCodeExample` and open the Java Class inside of it on your favorite IDE. Try to find pieces of code that seem to be close related for about 10 minutes. 
 
 Questions:
 - Can you detect duplication with your bare eyes?
@@ -15,9 +15,9 @@ Main lesson: Manual clone detection does not scale very well. We will therefore 
 ## Task 2: Automated Small Scale Clone Detection (10 min)
 
 Let's use an automated tool for duplicate detection, [Dude](http://wettel.github.io/dude.html). This tool uses line similarity to find clones. 
-Now, we will use Dude to detect clones on the ```ShortCodeExample/DuplicationSuspect.java''' file. 
+Now, we will use Dude to detect clones on the `ShortCodeExample/DuplicationSuspect.java` file. 
 
-Download and execute Dude. Since it is a java executable, Dude should run on any platform with a JVM. On the main interface, click on the "Home/House" icon (or menu 'Search' -> 'Set starting directory') and select the folder with ```ShortCodeExample'''. Make sure there are no other files in this folder otherwise Dude will also try to detect clones on them. Then click on the 'Search' icon (or menu 'Search' -> 'Search').
+Download and execute Dude. Since it is a java executable, Dude should run on any platform with a JVM. On the main interface, click on the "Home/House" icon (or menu 'Search' -> 'Set starting directory') and select the folder with `ShortCodeExample`. Make sure there are no other files in this folder otherwise Dude will also try to detect clones on them. Then click on the 'Search' icon (or menu 'Search' -> 'Search').
 
 Questions:
 - How easy was to use this tool?
