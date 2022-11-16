@@ -166,4 +166,4 @@ Lets try a simple one, called [Codacy](https://www.codacy.com/). It has a free t
 
 # Credits
 
-This guide was conceptualized and originally written by **Prof. Henrique Rocha** at the Loyola University Maryland, in Nov/2022. This guide was based on a Code Duplication lecture adapted from the University of Antwerp, Software Reengineering course. 
+This guide was conceptualized and written by **Prof. Henrique Rocha** at the Loyola University Maryland, in Nov/2022. This guide was based on a Code Duplication lecture adapted from the University of Antwerp, Software Reengineering course. 
