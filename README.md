@@ -31,6 +31,8 @@ Download and execute Dude. Since it is a java executable, Dude should run on any
 
 ![Dude-Task2](./images/dude-short-duplicate.png)
 
+Look at the general statistics for the clones in this run by going to meny 'Search' -> 'Statistics'.
+
 **Questions:**
 - How easy was it to use this tool?
 - Did the tool detect more or fewer duplicates than you?
