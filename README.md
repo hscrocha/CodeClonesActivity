@@ -91,6 +91,8 @@ Now that rcfviewer works, let's ask it to display our clone report. Make sure yo
 ../rcfviewer-0.2/rcfviewer.sh clonereport.rcf
 ```
 
+![rcfviewer](./images/rcfviewer.png)
+
 This tool detects and organizes clones. It also categorizes clones by type:
 - Type 1: Identical clones, exact match except for differences in whitespaces, line breaks, comments. 
 - Type 2: Structural identical clones, meaning variables can be renamed and constants may change.
