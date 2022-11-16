@@ -29,6 +29,8 @@ Now, we will use Dude to detect clones on the `ShortCodeExample/DuplicationSuspe
 
 Download and execute Dude. Since it is a java executable, Dude should run on any platform with a JVM. On the main interface, click on the "Home/House" icon (or menu 'Search' -> 'Set starting directory') and select the folder with `ShortCodeExample`. Make sure there are no other files in this folder otherwise Dude will also try to detect clones on them. Then click on the 'Search' icon (or menu 'Search' -> 'Search').
 
+![Dude-Task2](./images/dude-short-duplicate.png)
+
 **Questions:**
 - How easy was it to use this tool?
 - Did the tool detect more or fewer duplicates than you?
