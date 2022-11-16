@@ -164,4 +164,6 @@ Lets try a simple one, called [Codacy](https://www.codacy.com/). It has a free t
 - [Dude academic paper](http://wettel.github.io/download/wettel05-synasc.pdf): Wettel R., Marinescu R., "Archeology of Code Duplication: Recovering Duplication Chains from Small Duplication Fragments", In Proceedings of 7th International Symposium on Symbolic and Numeric Algorithms for Scientific Computing (SYNASC 2005), p.63-70, IEEE Computer Society, 2005.
 - [SonarQube](https://www.sonarqube.org/downloads/): One of the best tools for refactoring aids and code quality assessment. The Community version is the truly free version.
 
+# Credits
 
+This guide was conceptualized and originally written by **Prof. Henrique Rocha** at the Loyola University Maryland, in Nov/2022. This guide was based on a Code Duplication lecture adapted from the University of Antwerp, Software Reengineering course. 
