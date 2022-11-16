@@ -108,15 +108,22 @@ Questions:
 
 Main Lesson: Sophisticated tools are necessary to apply clone detection in real-world applications. Moreover, type-1 clones are prime candidates for refactorings and the easiest to remove. Type-2 clones are also good and simple candidates for refactoring activities.
 
+## Task 6: Online Professional Tool (For those who finished earlier the other tasks)
+
+There are many professional tools for code quality assessment, which often includes clone detection. Most of these tools are subscription based, but they may offer a community/personal/open-source plan for free.
+
+Lets try a simple one, called [Codacy](https://www.codacy.com/). It has a free trial that will automatically revert to the free comunity version after the trial period is over. You can use your GitHub account to sign up and inspect your repositories. Codacy offers a general Duplication percentage on the dashboard. It also gives a more detail display of the clones on its "Files" view. Play around with it, and see what you can discover.
+
+Questions:
+- How did you like the interface for this professional tool?
+- Is it more easy to find clones here than iClones?
+
+Main Lesson: Not really a lesson, just play a bit with a more modern professional tool while it is still free.
 
 
-## Others
+## Additional Materials
 
 - [Dude academic paper](http://wettel.github.io/download/wettel05-synasc.pdf): Wettel R., Marinescu R., "Archeology of Code Duplication: Recovering Duplication Chains from Small Duplication Fragments", In Proceedings of 7th International Symposium on Symbolic and Numeric Algorithms for Scientific Computing (SYNASC 2005), p.63-70, IEEE Computer Society, 2005.
+- [SonarQube](https://www.sonarqube.org/downloads/): One of the best tools for refactoring aids and code quality assessment. The Community version is the truly free version.
 
 
-http://wettel.github.io/dude.html
-
-https://www.txl.ca/txl-nicaddownload.html
-
-https://sourceforge.net/projects/freemercator/
