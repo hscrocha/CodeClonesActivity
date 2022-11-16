@@ -8,11 +8,11 @@ Just clone this repo as a zip file, and unpack the zip to have access to the sou
 
 We start with the ultimate clone detector: the developer. Look at the folder `ShortCodeExample` and open the Java Class inside of it on your favorite IDE. Try to find pieces of code that seem to be closely related for about 10 minutes. 
 
-Questions:
+**Questions**:
 - Can you detect duplication with your bare eyes?
 - Which methods seem to be similar?
 
-Main lesson: Manual clone detection does not scale very well. We will therefore use some tools to do the tedious comparisons.
+*Main lesson: Manual clone detection does not scale very well. We will therefore use some tools to do the tedious comparisons.*
 
 ## Task 2: Automated Small Scale Clone Detection (10 min)
 
