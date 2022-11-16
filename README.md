@@ -83,7 +83,7 @@ That will create a file called 'clonereport.rcf' which contains all the clones d
 ```
 ../rcfviewer-0.2/rcfviewer.sh
 ```
-If that displas an empty interface, it means the rcfviewer is working and you can skip to the next paragraph. If you get any errors, it is probably because the runner copied the wrong library. Open the `rcfviewer-0.2` folder in your file explorer, and look inside the folder `jar/swt`. Order the files by date, and pick the most current version for your operating system and hardware. Copy the swt-<os-hardware>.jar file to the `jar` folder and rename it as `swt.jar`. Try running rcfviewer again from the command-line. If it does not work, try copying a different library.
+If that displas an empty interface, it means the rcfviewer is working and you can skip to the next paragraph. If you get any errors, it is probably because the runner copied the wrong library. Open the `rcfviewer-0.2` folder in your file explorer, and look inside the folder `jar/swt`. Order the files by date, and pick the most current version for your operating system and hardware. Copy the swt-&lt;os-hardware&gt;.jar file to the `jar` folder and rename it as `swt.jar`. Try running rcfviewer again from the command-line. If it does not work, try copying a different library.
 
 Now that rcfviewer works, lets ask it to display our clone report. Make sure you are still on the freemercator as your current folder, and type in the terminal/prompt:
 ```
