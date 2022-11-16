@@ -55,15 +55,15 @@ Questions:
 
 Main lesson: It is important to use the tools and practice we learn in our own code. Moreover, we should always consider refactoring clones for better internal code quality.
 
-## Task 5: Large-Scale Clone Detection 
+## Task 5: Large-Scale Clone Detection (10-20min)
 
 Dude is a useful tool for small projects. However, for large codebases, its method may be too slow for practical usage (Dude's time complexity seems to be quadratic). Therefore, once our sources increase in size, we must choose tools that scale better for larger systems. 
 
 Download the [FreeMercator](https://sourceforge.net/projects/freemercator/) source code. FreeMercator is a Point-of-Sales Application written in Java. It has approximately 67K lines of code (30K Java, 36K XML). If you try to run Dude on it, it will take about 15-30 minutes.
 
-Let's try now a more sophisticated tool, called [iClones](http://www.softwareclones.org/iclones.php). The version we are using is free for personal and academic purposes. In the folder `Tools` on this repo, there is already zip files with iClones and its viewer (RCFViewer). Be sure to use the tools on this repository (the professor made some changes for it to run more easily). These are command line tools, and we will need to use the Terminal/Prompt. The commands are for Mac/Unix, and you must adapt appropriately for Windows (ex.: change '/' on the path for '\', instead of ".sh" use ".bat", etc.).
+Let's try now a more sophisticated tool, called [iClones](http://www.softwareclones.org/iclones.php). The version we are using is free for personal and academic purposes. In the folder `Tools` on this repo, there are already zip files with iClones and its viewer (RCFViewer). Be sure to use the tools on this repository (the professor made some changes for it to run more easily). These are command line tools, and we will need to use the Terminal/Prompt. The commands are for Mac/Unix, and you must adapt appropriately for Windows (ex.: change '/' on the path for '\', instead of ".sh" use ".bat", etc.).
 
-Create a folder anywhere in your computer, and place the folders for iClones, rcfviewer, and freemercator inside of it. 
+Create a folder anywhere on your computer, and place the folders for iClones, rcfviewer, and freemercator inside of it. 
 
 ```
     .                        # My folder for this task
@@ -74,7 +74,7 @@ Create a folder anywhere in your computer, and place the folders for iClones, rc
 
 All the commands will assume you are using this exact same folder structure and names. I strongly suggest you follow this exact same structure and do not change it, as it may affect the display of the clones (this tool is very temperamental). 
 
-Open a terminal/prompt and set freemarcator as your current folder. Now lets run iClones with the following command:
+Open a terminal/prompt and set freemercator as your current folder. Now, let's run iClones with the following command:
 ```
 ../iclones-0.2/iclones -input . -output clonereport.rcf -outformat rcf
 ```
@@ -83,12 +83,31 @@ That will create a file called 'clonereport.rcf' which contains all the clones d
 ```
 ../rcfviewer-0.2/rcfviewer.sh
 ```
-If that displas an empty interface, it means the rcfviewer is working and you can skip to the next paragraph. If you get any errors, it is probably because the runner copied the wrong library. Open the `rcfviewer-0.2` folder in your file explorer, and look inside the folder `jar/swt`. Order the files by date, and pick the most current version for your operating system and hardware. Copy the `swt-<os-hardware>.jar` file to the `jar` folder and rename it as `swt.jar`. Try running rcfviewer again from the command-line. If it does not work, try copying a different library.
+If that displays an empty interface, it means the rcfviewer is working and you can skip to the next paragraph. If you get any errors, it is probably because the runner copied the wrong library. Open the `rcfviewer-0.2` folder in your file explorer, and look inside the folder `jar/swt`. Order the files by date, and pick the most current version for your operating system and hardware. Copy the `swt-<os-hardware>.jar` file to the `jar` folder and rename it as `swt.jar`. Try running rcfviewer again from the command line. If it does not work, try copying a different library.
 
-Now that rcfviewer works, lets ask it to display our clone report. Make sure you are still on the freemercator as your current folder, and type in the terminal/prompt:
+Now that rcfviewer works, let's ask it to display our clone report. Make sure you are still on the freemercator as your current folder and type in the terminal/prompt:
 ```
 ../rcfviewer-0.2/rcfviewer.sh clonereport.rcf
 ```
+
+This tool detects and organizes clones. It also categorizes clones by type:
+- Type 1: Exact match (only different in whitespaces, line breaks, comments). 
+- Type 2: Same syntax, meaning variables can be renamed and constants may change.
+- Type 3: Close match, the majority of the code is similar with added, deleted, or modified lines.
+- Type 4: Semantic clone, code is different but does the same thing.
+
+The viewer also displays the source code (if you dont see the source code, you did not follow the instructions exactly and changed something, most probably where you executed the commands).
+
+Questions:
+- Did you try to run Dude in the background? Are you still waiting for it to finish?
+- What information do you have in the clone report viewer? What different views?
+- How many clone classes are reported?
+- What types of clones does the tool detect?
+- Can you determine any refactoring candidates from the source code view?
+- What types of clones are more clear, and easy, candidates for refactoring?
+
+Main Lesson: Sophisticated tools are necessary to apply clone detection in real-world applications. Moreover, type-1 clones are prime candidates for refactorings and the easiest to remove. Type-2 clones are also good and simple candidates for refactoring activities.
+
 
 
 ## Others
