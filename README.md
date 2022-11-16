@@ -61,6 +61,15 @@ Dude is a useful tool for small projects. However, for large codebases, its meth
 
 Download the [FreeMercator](https://sourceforge.net/projects/freemercator/) source code. FreeMercator is a Point-of-Sales Application written in Java. It has approximately 67K lines of code (30K Java, 36K XML). If you try to run Dude on it, it will take about 15-30 minutes.
 
+Let's try now a more sophisticated tool, called [iClones](http://www.softwareclones.org/iclones.php). The version we are using is free for personal and academic purposes. In the folder `Tools` on this repo, there is already zip files with iClones and its viewer (RCFViewer). Be sure to use the tools on this repository (the professor made some changes for it to run more easily). This is a command line tool, and we will need to use the Terminal/Prompt. The commands are for Mac/Unix, and you must adapt appropriately for Windows (ex.: change '/' on the path for '\', instead of ".sh" use ".bat", etc.).
+
+Create a folder anywhere in your computer, and place the folders for iClones, rcfviewer, and freemercator inside of it. 
+    .                        # My folder for this task
+    ├── freemercator             # Unpacked Freemercator source codes
+    ├── iclones-0.2              # Unpacked iClones
+    └── rcfviewer-0.2            # Unpacked RCFViewer
+
+
 
 ## Others
 
