@@ -57,7 +57,7 @@ Main lesson: It is important to use the tools and practice we learn in our own c
 
 ## Task 5: Large-Scale Clone Detection 
 
-Dude is a useful tool for small projects. However, for large codebases, its method may be too slow for practical usage. Therefore, once our sources increase in size, we must choose tools that scale better for larger systems. 
+Dude is a useful tool for small projects. However, for large codebases, its method may be too slow for practical usage (Dude's time complexity seems to be quadratic). Therefore, once our sources increase in size, we must choose tools that scale better for larger systems. 
 
 Download the [FreeMercator](https://sourceforge.net/projects/freemercator/) source code. FreeMercator is a Point-of-Sales Application written in Java. It has approximately 67K lines of code (30K Java, 36K XML). If you try to run Dude on it, it will take about 15-30 minutes.
 
