@@ -44,7 +44,7 @@ Let's change some of the parameters on Dude, and see how that could affect the c
 
 Click on the "Wrench" icon (or menu 'Search' -> 'Configure Parameters'). Change the 'Line Comparison Strategy' option to 'Tokenized Distance'. Moreover, make sure the Similarity Threshold is at 80%. After confirming the new configuration, click on the 'Search' icon again (or menu 'Search' -> 'Search'). 
 
-![Dude Config](./images/dude-config.png)
+![Dude Config](./images/dude-config.png | width=100)
 
 **Questions:**
 - By changing, the configuration, did the tool detect more clones?
