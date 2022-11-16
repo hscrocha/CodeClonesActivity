@@ -72,9 +72,24 @@ Create a folder anywhere in your computer, and place the folders for iClones, rc
     └── rcfviewer-0.2            # Unpacked RCFViewer
 ```
 
-All the commands will assume you are using this exact same folder structure and names. I do not recommend you change it, as it may affect the display of the clones (this tool is very temperamental). 
+All the commands will assume you are using this exact same folder structure and names. I strongly suggest you follow this exact same structure and do not change it, as it may affect the display of the clones (this tool is very temperamental). 
 
-Open a terminal/prompt and set freemarcator as your current folder. 
+Open a terminal/prompt and set freemarcator as your current folder. Now lets run iClones with the following command:
+```
+../iclones-0.2/iclones -input . -output clonereport.rcf -outformat rcf
+```
+
+That will create a file called 'clonereport.rcf' which contains all the clones detected by iClones. To see these clones in a more user-friendly interface, we need to use the rcfViewer. But first, we need to configure rcfViewer to our environment, as it uses the SWT library for its interface. By running rcfViewer it will try to automatically use the copy and use the correct library. Run the command (change 'sh' to 'bat' on Windows) and see if you get an empty interface:
+```
+../rcfviewer-0.2/rcfviewer.sh
+```
+If that displas an empty interface, it means the rcfviewer is working and you can skip to the next paragraph. If you get any errors, it is probably because the runner copied the wrong library. Open the `rcfviewer-0.2` folder in your file explorer, and look inside the folder `jar/swt`. Order the files by date, and pick the most current version for your operating system and hardware. Copy the swt-<os-hardware>.jar file to the `jar` folder and rename it as `swt.jar`. Try running rcfviewer again from the command-line. If it does not work, try copying a different library.
+
+Now that rcfviewer works, lets ask it to display our clone report. Make sure you are still on the freemercator as your current folder, and type in the terminal/prompt:
+```
+../rcfviewer-0.2/rcfviewer.sh clonereport.rcf
+```
+
 
 ## Others
 
