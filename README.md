@@ -42,20 +42,7 @@ Try to change other parameters of DuDe and see how that affects the detected clo
 
 Main lesson: The configuration of your clone detection tool can greatly affect the number of detected clones. You must customize those parameters to better suit your project.
 
-## Task 4: Small Scale Clone Detection on your Project (10 min)
-
-Now it is time to run this tool on your own project. Clone the current version of your project as a zip file and unpack. From this copy, delete all folders and files that are not source code (including the folders node_modules, ios, android, and the files packages.json, packages-lock.json). 
-
-Make sure Dude is configured with Tokenized Distance of 80%, and run the tool on your project. It may take a few minutes depending on how many source files you had (be glad you deleted all extra fat before running Dude).
-
-Questions:
-- How many clones did the tool detect in your project?
-- Did you know your project had that many clones?
-- Do you think some of these clones could be refactored?
-
-Main lesson: It is important to use the tools and practice we learn in our own code. Moreover, we should always consider refactoring clones for better internal code quality.
-
-## Task 5: Large-Scale Clone Detection (10-20min)
+## Task 4: Large-Scale Clone Detection (10-20min)
 
 Dude is a useful tool for small projects. However, for large codebases, its method may be too slow for practical usage (Dude's time complexity seems to be quadratic). Therefore, once our sources increase in size, we must choose tools that scale better for larger systems. 
 
@@ -107,6 +94,29 @@ Questions:
 - What types of clones are more clear, and easy, candidates for refactoring?
 
 Main Lesson: Sophisticated tools are necessary to apply clone detection in real-world applications. Moreover, type-1 clones are prime candidates for refactorings and the easiest to remove. Type-2 clones are also good and simple candidates for refactoring activities.
+
+## Task 5: Small Scale Clone Detection on your Project (10 min)
+
+Now it is time to run a clone detection tool on your own project. Clone the current version of your project as a zip file and unpack. You can choose to use Dude or iClones. 
+
+If you are going to use Dude, it is a good idea to delete all folders and files that are not source code (including the folders node_modules, ios, android, and the files packages.json, packages-lock.json) beforing running the tool. Also make sure Dude is configured with Tokenized Distance of 80%, and run the tool on your project. It may take a few minutes depending on how many source files you had (be glad you deleted all extra fat before running Dude).
+
+I would recommend using iClones, since it is a much better and faster tool. Follow similar steps, unpack your project into a folder with iclones and rcfviewer on the same folder structure as:
+```
+    .                        # A folder for this task to contain these folders.
+    ├── my-se-project            # Unpacked SE project source codes
+    ├── iclones-0.2              # Unpacked iClones
+    └── rcfviewer-0.2            # Unpacked RCFViewer
+```
+By using this folder structure you open a terminal and set the current folder as your project folder. Now you use the exact same commands from the iClones Task.
+
+Questions:
+- How many clones did the tool detect in your project?
+- Did you know your project had that many clones?
+- Do you think some of these clones could be refactored?
+
+Main lesson: It is important to use the tools and practice we learn in our own code. Moreover, we should always consider refactoring clones for better internal code quality.
+
 
 ## Task 6: Online Professional Tool (For those who finished earlier the other tasks)
 
