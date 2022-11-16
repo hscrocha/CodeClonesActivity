@@ -6,7 +6,7 @@ Just clone this repo as a zip file, and unpack the zip to have access to the sou
 
 ## Task 1: Manual Code Clone Detection (10 min)
 
-We start with the ultimate clone detector: the developer. Look at the folder `ShortCodeExample` and open the Java Class inside of it on your favorite IDE. Try to find pieces of code that seem to be close related for about 10 minutes. 
+We start with the ultimate clone detector: the developer. Look at the folder `ShortCodeExample` and open the Java Class inside of it on your favorite IDE. Try to find pieces of code that seem to be closely related for about 10 minutes. 
 
 Questions:
 - Can you detect duplication with your bare eyes?
@@ -22,23 +22,23 @@ Now, we will use Dude to detect clones on the `ShortCodeExample/DuplicationSuspe
 Download and execute Dude. Since it is a java executable, Dude should run on any platform with a JVM. On the main interface, click on the "Home/House" icon (or menu 'Search' -> 'Set starting directory') and select the folder with `ShortCodeExample`. Make sure there are no other files in this folder otherwise Dude will also try to detect clones on them. Then click on the 'Search' icon (or menu 'Search' -> 'Search').
 
 Questions:
-- How easy was to use this tool?
+- How easy was it to use this tool?
 - Did the tool detect more or fewer duplicates than you?
 - Can you determine any refactoring candidates based on this tool output?
 
-Main lesson: Any laborious activity may be much better served by an automated tool. I am positive, this tool detected more clones than you did in much less time. Code clones is one of the major smells for refactoring, therefore, this tool could be very useful.
+Main lesson: Any laborious activity may be much better served by an automated tool. I am positive, this tool detected more clones than you did in much less time. Code clones are one of the major smells for refactoring, therefore, this tool could be very useful.
 
 ## Task 3: Customizing Small Scale Clone Detection (10 min)
 
-Lets change some of the parameters on Dude, and see how that could affect the clone detection.
+Let's change some of the parameters on Dude, and see how that could affect the clone detection.
 
-Click on the "Wrench"icon (or menu 'Search' -> 'Configure Parameters'). Change the 'Line Comparison Strategy' option to 'Tokenized Distance'. Moreover, make sure the Similarity Threshold is at 80%. After confirming the new configuration, click on the 'Search' icon again (or menu 'Search' -> 'Search'). 
+Click on the "Wrench" icon (or menu 'Search' -> 'Configure Parameters'). Change the 'Line Comparison Strategy' option to 'Tokenized Distance'. Moreover, make sure the Similarity Threshold is at 80%. After confirming the new configuration, click on the 'Search' icon again (or menu 'Search' -> 'Search'). 
 
 Questions:
-- By chaging the configuration, did the tool detected more clones?
+- By changing, the configuration, did the tool detect more clones?
 - How is it different to set the parameters for exact matching (the default configuration) compared to other similarities? 
 
-Try to change other parameters of DuDe and see how that affects the detected clones. The minimum size of the duplication chain (min SDC) is the threshold based on which Dude filters the insignificant results. The maximum line biax (max LB) is the maximum length of the gap that is allowed to link two consecutive exact chunks within a duplication chain. The minimum size of the exact chunk (min SEC) is the smallest size for a exact chain allowed to be part of a duplication chain.
+Try to change other parameters of DuDe and see how that affects the detected clones. The minimum size of the duplication chain (min SDC) is the threshold based on which Dude filters the insignificant results. The maximum line biax (max LB) is the maximum length of the gap that is allowed to link two consecutive exact chunks within a duplication chain. The minimum size of the exact chunk (min SEC) is the smallest size for an exact chain allowed to be part of a duplication chain.
 
 Main lesson: The configuration of your clone detection tool can greatly affect the number of detected clones. You must customize those parameters to better suit your project.
 
@@ -53,13 +53,13 @@ Questions:
 - Did you know your project had that many clones?
 - Do you think some of these clones could be refactored?
 
-Main lesson: It is important to use the tools and practice we learn into our own code. Moreover, we should always consider refactoring clones for better internal code quality.
+Main lesson: It is important to use the tools and practice we learn in our own code. Moreover, we should always consider refactoring clones for better internal code quality.
 
-## Task 5: Large Scale Clone Detection 
+## Task 5: Large-Scale Clone Detection 
 
-Dude is a useful tool for small projects. However for large codebases, its method may be too slow for practical usage. Therefore, once our sources increases in size, we must chose tools that scales better for larger systems. 
+Dude is a useful tool for small projects. However, for large codebases, its method may be too slow for practical usage. Therefore, once our sources increase in size, we must choose tools that scale better for larger systems. 
 
-Download the [FreeMercator](https://sourceforge.net/projects/freemercator/) source code. FreeMercator is Point-of-Sales Application written in Java. It has approximately 67K lines of code (30K Java, 36K XML). If you try to run Dude on it, it will take about 10 minutes.
+Download the [FreeMercator](https://sourceforge.net/projects/freemercator/) source code. FreeMercator is a Point-of-Sales Application written in Java. It has approximately 67K lines of code (30K Java, 36K XML). If you try to run Dude on it, it will take about 10-20 minutes.
 
 Therefore, ...
 
