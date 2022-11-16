@@ -12,7 +12,7 @@ We start with the ultimate clone detector: the developer. Look at the folder `Sh
 - Can you detect duplication with your bare eyes?
 - Which methods seem to be similar?
 
-> *Main lesson:* Manual clone detection does not scale very well. We will therefore use some tools to do the tedious comparisons.
+> Main lesson: Manual clone detection does not scale very well. We will therefore use some tools to do the tedious comparisons.
 
 ## Task 2: Automated Small Scale Clone Detection (10 min)
 
@@ -21,12 +21,12 @@ Now, we will use Dude to detect clones on the `ShortCodeExample/DuplicationSuspe
 
 Download and execute Dude. Since it is a java executable, Dude should run on any platform with a JVM. On the main interface, click on the "Home/House" icon (or menu 'Search' -> 'Set starting directory') and select the folder with `ShortCodeExample`. Make sure there are no other files in this folder otherwise Dude will also try to detect clones on them. Then click on the 'Search' icon (or menu 'Search' -> 'Search').
 
-Questions:
+**Questions:**
 - How easy was it to use this tool?
 - Did the tool detect more or fewer duplicates than you?
 - Can you determine any refactoring candidates based on this tool output?
 
-Main lesson: Any laborious activity may be much better served by an automated tool. I am positive, this tool detected more clones than you did in much less time. Code clones are one of the major smells for refactoring, therefore, this tool could be very useful.
+> Main lesson: Any laborious activity may be much better served by an automated tool. I am positive, this tool detected more clones than you did in much less time. Code clones are one of the major smells for refactoring, therefore, this tool could be very useful.
 
 ## Task 3: Customizing Small Scale Clone Detection (10 min)
 
@@ -34,13 +34,13 @@ Let's change some of the parameters on Dude, and see how that could affect the c
 
 Click on the "Wrench" icon (or menu 'Search' -> 'Configure Parameters'). Change the 'Line Comparison Strategy' option to 'Tokenized Distance'. Moreover, make sure the Similarity Threshold is at 80%. After confirming the new configuration, click on the 'Search' icon again (or menu 'Search' -> 'Search'). 
 
-Questions:
+**Questions:**
 - By changing, the configuration, did the tool detect more clones?
 - How is it different to set the parameters for exact matching (the default configuration) compared to other similarities? 
 
 Try to change other parameters of DuDe and see how that affects the detected clones. The minimum size of the duplication chain (min SDC) is the threshold based on which Dude filters the insignificant results. The maximum line bias (max LB) is the maximum length of the gap that is allowed to link two consecutive exact chunks within a duplication chain. The minimum size of the exact chunk (min SEC) is the smallest size for an exact chain allowed to be part of a duplication chain.
 
-Main lesson: The configuration of your clone detection tool can greatly affect the number of detected clones. You must customize those parameters to better suit your project.
+> Main lesson: The configuration of your clone detection tool can greatly affect the number of detected clones. You must customize those parameters to better suit your project.
 
 ## Task 4: Large-Scale Clone Detection (10-20min)
 
@@ -85,7 +85,7 @@ This tool detects and organizes clones. It also categorizes clones by type:
 
 The viewer also displays the source code (if you dont see the source code, you did not follow the instructions exactly and changed something, most probably where you executed the commands).
 
-Questions:
+**Questions:**
 - Did you try to run Dude in the background? Are you still waiting for it to finish?
 - What information do you have in the clone report viewer? What different views?
 - How many clone classes are reported?
@@ -93,7 +93,7 @@ Questions:
 - Can you determine any refactoring candidates from the source code view?
 - What types of clones are more clear, and easy, candidates for refactoring?
 
-Main Lesson: Sophisticated tools are necessary to apply clone detection in real-world applications. Moreover, type-1 clones are prime candidates for refactorings and the easiest to remove. Type-2 clones are also good and simple candidates for refactoring activities.
+> Main Lesson: Sophisticated tools are necessary to apply clone detection in real-world applications. Moreover, type-1 clones are prime candidates for refactorings and the easiest to remove. Type-2 clones are also good and simple candidates for refactoring activities.
 
 ### Optional Tasks: Customizing iClones
 
@@ -109,11 +109,11 @@ Try for example this (adapting the command line accordingly to run on your sourc
 ```
 The above line will create a new report file called `report2.rcf`. As you can see, the above configuration makes iClones more 'strict', since minblock = 0 it will only detect identical clones. This time, adjust minblock and minclone to remove false positives (you will have to create a new report with iClones and open it again with rcfviewer). 
 
-Questions:
+**Questions:**
 - Which options seem to remove more false positives?
 - You are on the lookout for clones, which can be easily refactored? Which option values seem to lead to these clones?
 
-Main Lesson: Customizing your clone detection tool is important to find better matches for your refactoring activities.
+> Main Lesson: Customizing your clone detection tool is important to find better matches for your refactoring activities.
 
 ## Task 5: Clone Detection on your Project (10 min)
 
@@ -130,12 +130,12 @@ I would recommend using iClones, since it is a much better and faster tool. Foll
 ```
 By using this folder structure you open a terminal and set the current folder as your project folder. Now you use the exact same commands from the iClones Task.
 
-Questions:
+**Questions:**
 - How many clones did the tool detect in your project?
 - Did you know your project had that many clones?
 - Do you think some of these clones could be refactored?
 
-Main lesson: It is important to use the tools and practice we learn in our own code. Moreover, we should always consider refactoring clones for better internal code quality.
+> Main lesson: It is important to use the tools and practice we learn in our own code. Moreover, we should always consider refactoring clones for better internal code quality.
 
 
 ## Task 6: Online Professional Tool (For those who finished earlier the other tasks)
@@ -144,11 +144,11 @@ There are many professional tools for code quality assessment, which often inclu
 
 Lets try a simple one, called [Codacy](https://www.codacy.com/). It has a free trial that will automatically revert to the free comunity version after the trial period is over. You can use your GitHub account to sign up and inspect your repositories. Codacy offers a general Duplication percentage on the dashboard. It also gives a more detail display of the clones on its "Files" view. Play around with it, and see what you can discover.
 
-Questions:
+**Questions:**
 - How did you like the interface for this professional tool?
 - Is it more easy to find clones here than iClones?
 
-Main Lesson: Not really a lesson, just play a bit with a more modern professional tool while it is still free.
+> Main Lesson: Not really a lesson, just play a bit with a more modern professional tool while it is still free.
 
 
 ## Additional Materials
