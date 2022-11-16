@@ -1,8 +1,16 @@
 # Code Clones: Hands-on Lecture
 
-This repository presents a practical lecture on using Code Clones Tools. 
+This repository presents a practical lecture on using Code Clones Tools, for the Software Engineering course at the Loyola University Maryland. 
 
 Just clone this repo as a zip file, and unpack the zip to have access to the source code inside. 
+
+## Introduction
+
+Duplicated code is a phenomena that could be as old as programming itself. It is easy to understand the appeal of duplicating code: it is fast and easy.
+
+There are many disadvantages associated with the practice of cloning code as it makes maintenance more difficult by: (i) copying bugs, (ii) managing changes across duplicates, and (iii) hinders the understandability. 
+
+Fowler and Beck have ranked duplicated code as the first of the top ten code smells indicating the need to refactor a piece of software.
 
 ## Task 1: Manual Code Clone Detection (10 min)
 
@@ -78,8 +86,8 @@ Now that rcfviewer works, let's ask it to display our clone report. Make sure yo
 ```
 
 This tool detects and organizes clones. It also categorizes clones by type:
-- Type 1: Exact match (only different in whitespaces, line breaks, comments). 
-- Type 2: Same syntax, meaning variables can be renamed and constants may change.
+- Type 1: Identical clones, exact match except for differences in whitespaces, line breaks, comments. 
+- Type 2: Structural identical clones, meaning variables can be renamed and constants may change.
 - Type 3: Close match, the majority of the code is similar with added, deleted, or modified lines.
 - Type 4: Semantic clone, code is different but does the same thing.
 
