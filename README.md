@@ -95,7 +95,27 @@ Questions:
 
 Main Lesson: Sophisticated tools are necessary to apply clone detection in real-world applications. Moreover, type-1 clones are prime candidates for refactorings and the easiest to remove. Type-2 clones are also good and simple candidates for refactoring activities.
 
-## Task 5: Small Scale Clone Detection on your Project (10 min)
+### Optional Tasks: Customizing iClones
+
+As we saw with Dude, changing the configuration of a clone detection tool can greatly affect its results. We can also customize iClones by giving it special parameters to its command line execution.
+
+For clone detection, we are mainly interested in two options:
+- minblock: Minimum length of identical token sequences that are used to merge near-miss clones. (Default: 20)
+- minclone: Minimum length of clones measured in tokens. (Default: 100)
+
+Try for example this (adapting the command line accordingly to run on your sources, path, and platform):
+```
+../iclones-0.2/iclones -minblock 0 -minclone 100 -input . -output report2.rcf -outformat rcf
+```
+The above line will create a new report file called `report2.rcf`. As you can see, the above configuration makes iClones more 'strict', since minblock = 0 it will only detect identical clones. This time, adjust minblock and minclone to remove false positives (you will have to create a new report with iClones and open it again with rcfviewer). 
+
+Questions:
+- Which options seem to remove more false positives?
+- You are on the lookout for clones, which can be easily refactored? Which option values seem to lead to these clones?
+
+Main Lesson: Customizing your clone detection tool is important to find better matches for your refactoring activities.
+
+## Task 5: Clone Detection on your Project (10 min)
 
 Now it is time to run a clone detection tool on your own project. Clone the current version of your project as a zip file and unpack. You can choose to use Dude or iClones. 
 
