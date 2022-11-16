@@ -42,8 +42,20 @@ Try to change other parameters of DuDe and see how that affects the detected clo
 
 Main lesson: The configuration of your clone detection tool can greatly affect the number of detected clones. You must customize those parameters to better suit your project.
 
-## Task 4: 
+## Task 4: Small Scale Clone Detection on your Project (10 min)
 
+Now it is time to run this tool on your own project. Clone the current version of your project as a zip file and unpack. From this copy, delete all folders and files that are not source code (including the folders node_modules, ios, android, and the files packages.json, packages-lock.json). 
+
+Make sure Dude is configured with Tokenized Distance of 80%, and run the tool on your project. It may take a few minutes depending on how many source files you had (be glad you deleted all extra fat before running Dude).
+
+Questions:
+- How many clones did the tool detect in your project?
+- Did you know your project had that many clones?
+- Do you think some of these clones could be refactored?
+
+Main lesson: It is important to use the tools and practice we learn into our own code. Moreover, we should always consider refactoring clones for better internal code quality.
+
+## Task 5: ...
 
 http://wettel.github.io/dude.html
 
