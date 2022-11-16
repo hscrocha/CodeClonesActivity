@@ -55,7 +55,14 @@ Questions:
 
 Main lesson: It is important to use the tools and practice we learn into our own code. Moreover, we should always consider refactoring clones for better internal code quality.
 
-## Task 5: ...
+## Task 5: Large Scale Clone Detection 
+
+Dude is a useful tool for small projects. However for large codebases, its method may be too slow for practical usage. Therefore, once our sources increases in size, we must chose tools that scales better for larger systems. 
+
+Download the [FreeMercator](https://sourceforge.net/projects/freemercator/) source code. FreeMercator is Point-of-Sales Application written in Java. It has approximately 67K lines of code (30K Java, 36K XML). If you try to run Dude on it, it will take about 10 minutes.
+
+Therefore, ...
+
 
 http://wettel.github.io/dude.html
 
