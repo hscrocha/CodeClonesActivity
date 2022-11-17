@@ -171,6 +171,8 @@ Lets try a simple one, called [Codacy](https://www.codacy.com/). It has a free t
 
 - [Dude academic paper](http://wettel.github.io/download/wettel05-synasc.pdf): Wettel R., Marinescu R., "Archeology of Code Duplication: Recovering Duplication Chains from Small Duplication Fragments", In Proceedings of 7th International Symposium on Symbolic and Numeric Algorithms for Scientific Computing (SYNASC 2005), p.63-70, IEEE Computer Society, 2005.
 - [SonarQube](https://www.sonarqube.org/downloads/): One of the best tools for refactoring aids and code quality assessment. The Community version is the truly free version.
+- [NiCad](https://www.txl.ca/txl-nicaddownload.html): A very popular (in the academia) clone detection tool. Probably the first one that was available and "easy" to use to general developers. You must first install the TXL (in the same page).
+
 
 # Credits
 
