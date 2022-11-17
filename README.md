@@ -1,14 +1,14 @@
 # Code Clones: Hands-on Lecture
 
-This repository presents a practical lecture on using Code Clones Tools, for the Software Engineering course at the Loyola University Maryland. 
+This repository presents a practical lecture on using Code Clones Tools, for the Software Engineering course at Loyola University Maryland. 
 
 Just clone this repo as a zip file, and unpack the zip to have access to the source code inside. 
 
 ## Introduction
 
-Duplicated code is a phenomena that could be as old as programming itself. It is easy to understand the appeal of duplicating code: it is fast and easy.
+Duplicated code is a phenomenon that could be as old as programming itself. It is easy to understand the appeal of duplicating code: it is fast and easy.
 
-There are many disadvantages associated with the practice of cloning code as it makes maintenance more difficult by: (i) copying bugs, (ii) managing changes across duplicates, and (iii) hinders the understandability. 
+There are many disadvantages associated with the practice of cloning code as it makes maintenance more difficult by: (i) copying bugs, (ii) managing changes across duplicates, and (iii) hindering understandability. 
 
 Fowler and Beck have ranked duplicated code as the first of the top ten code smells indicating the need to refactor a piece of software.
 
@@ -31,7 +31,7 @@ Download and execute Dude. Since it is a java executable, Dude should run on any
 
 ![Dude-Task2](./images/dude-short-duplicate.png)
 
-Look at the general statistics for the clones in this run by going to meny 'Search' -> 'Statistics'.
+Look at the general statistics for the clones in this run by going to the menu 'Search' -> 'Statistics'.
 
 **Questions:**
 - How easy was it to use this tool?
@@ -94,7 +94,7 @@ Now that rcfviewer works, let's ask it to display our clone report. Make sure yo
 ![rcfviewer](./images/rcfviewer.png)
 
 This tool detects and organizes clones. It also categorizes clones by type:
-- Type 1: Identical clones, exact match except for differences in whitespaces, line breaks, comments. 
+- Type 1: Identical clones, exact match except for differences in whitespaces, line breaks, and comments. 
 - Type 2: Structural identical clones, meaning variables can be renamed and constants may change.
 - Type 3: Close match, the majority of the code is similar with added, deleted, or modified lines.
 - Type 4: Semantic clone, code is different but does the same thing.
@@ -113,7 +113,7 @@ The viewer also displays the source code (if you dont see the source code, you d
 
 ### Optional Tasks: Customizing iClones
 
-As we saw with Dude, changing the configuration of a clone detection tool can greatly affect its results. We can also customize iClones by giving it special parameters to its command line execution.
+As we saw with Dude, changing the configuration of a clone detection tool can greatly affect its results. We can also customize iClones by giving it special parameters for its command line execution.
 
 For clone detection, we are mainly interested in two options:
 - minblock: Minimum length of identical token sequences that are used to merge near-miss clones. (Default: 20)
@@ -135,9 +135,9 @@ The above line will create a new report file called `report2.rcf`. As you can se
 
 Now it is time to run a clone detection tool on your own project. Clone the current version of your project as a zip file and unpack. You can choose to use Dude or iClones. 
 
-If you are going to use Dude, it is a good idea to delete all folders and files that are not source code (including the folders node_modules, ios, android, and the files packages.json, packages-lock.json) beforing running the tool. Also make sure Dude is configured with Tokenized Distance of 80%, and run the tool on your project. It may take a few minutes depending on how many source files you had (be glad you deleted all extra fat before running Dude).
+If you are going to use Dude, it is a good idea to delete all folders and files that are not source code (including the folders node_modules, ios, android, and the files packages.json, packages-lock.json) before running the tool. Also, make sure Dude is configured with Tokenized Distance of 80%, and run the tool on your project. It may take a few minutes depending on how many source files you had (be glad you deleted all extra fat before running Dude).
 
-I would recommend using iClones, since it is a much better and faster tool. Follow similar steps, unpack your project into a folder with iclones and rcfviewer on the same folder structure as:
+I would recommend using iClones, since it is a much better and faster tool. Follow similar steps, and unpack your project into a folder with iclones and rcfviewer on the same folder structure as:
 ```
     .                        # A folder for this task to contain these folders.
     ├── my-se-project            # Unpacked SE project source codes
@@ -151,18 +151,18 @@ By using this folder structure you open a terminal and set the current folder as
 - Did you know your project had that many clones?
 - Do you think some of these clones could be refactored?
 
-> Main lesson: It is important to use the tools and practice we learn in our own code. Moreover, we should always consider refactoring clones for better internal code quality.
+> Main lesson: It is important to use the tools and practice what we learn in our own code. Moreover, we should always consider refactoring clones for better internal code quality.
 
 
 ## Task 6: Online Professional Tool (For those who finished earlier the other tasks)
 
-There are many professional tools for code quality assessment, which often includes clone detection. Most of these tools are subscription based, but they may offer a community/personal/open-source plan for free.
+There are many professional tools for code quality assessment, which often include clone detection. Most of these tools are subscription based, but they may offer a community/personal/open-source plan for free.
 
-Lets try a simple one, called [Codacy](https://www.codacy.com/). It has a free trial that will automatically revert to the free comunity version after the trial period is over. You can use your GitHub account to sign up and inspect your repositories. Codacy offers a general Duplication percentage on the dashboard. It also gives a more detail display of the clones on its "Files" view. Play around with it, and see what you can discover.
+Let's try a simple one, called [Codacy](https://www.codacy.com/). It has a free trial that will automatically revert to the free community version after the trial period is over. You can use your GitHub account to sign up and inspect your repositories. Codacy offers a general Duplication percentage on the dashboard. It also gives a more detailed display of the clones on its "Files" view. Play around with it, and see what you can discover.
 
 **Questions:**
 - How did you like the interface for this professional tool?
-- Is it more easy to find clones here than iClones?
+- Is it easier to find clones here than iClones?
 
 > Main Lesson: Not really a lesson, just play a bit with a more modern professional tool while it is still free.
 
@@ -171,7 +171,7 @@ Lets try a simple one, called [Codacy](https://www.codacy.com/). It has a free t
 
 - [Dude academic paper](http://wettel.github.io/download/wettel05-synasc.pdf): Wettel R., Marinescu R., "Archeology of Code Duplication: Recovering Duplication Chains from Small Duplication Fragments", In Proceedings of 7th International Symposium on Symbolic and Numeric Algorithms for Scientific Computing (SYNASC 2005), p.63-70, IEEE Computer Society, 2005.
 - [SonarQube](https://www.sonarqube.org/downloads/): One of the best tools for refactoring aids and code quality assessment. The Community version is the truly free version.
-- [NiCad](https://www.txl.ca/txl-nicaddownload.html): A very popular (in the academia) clone detection tool. Probably the first one that was available and "easy" to use to general developers. You must first install the TXL (in the same page).
+- [NiCad](https://www.txl.ca/txl-nicaddownload.html): A very popular (in the academia) clone detection tool. Probably the first one that was available and "easy" to use for general developers. You must first install the TXL (on the same page).
 
 
 # Credits
