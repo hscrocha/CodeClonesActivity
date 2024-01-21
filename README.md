@@ -27,9 +27,11 @@ We start with the ultimate clone detector: the developer. Look at the folder `Sh
 Let's use an automated tool for duplicate detection, [Dude](http://wettel.github.io/dude.html). This tool uses line similarity to find clones. 
 Now, we will use Dude to detect clones on the `ShortCodeExample/DuplicationSuspect.java` file. 
 
-Download and execute Dude. Since it is a java executable, Dude should run on any platform with a JVM. On the main interface, click on the "Home/House" icon (or menu 'Search' -> 'Set starting directory') and select the folder with `ShortCodeExample`. Make sure there are no other files in this folder otherwise Dude will also try to detect clones on them. Then click on the 'Search' icon (or menu 'Search' -> 'Search').
+Download and execute Dude. Since it is a java executable, Dude should run on any platform with a JVM. On the main interface, click on the "Home/House" icon (or menu 'Search' -> 'Set starting directory') and select the folder with `ShortCodeExample`. Make sure there are no other files in this folder, otherwise, Dude will also try to detect clones on them. Then click on the 'Search' icon (or menu 'Search' -> 'Search').
 
 ![Dude-Task2](./images/dude-short-duplicate.png)
+
+**Attention MAC Users:** Dude cannot see inside Downloads or Documents folders (it lacks permission to do so). Please copy the java file into a folder inside your home folder.  
 
 Look at the general statistics for the clones in this run by going to the menu 'Search' -> 'Statistics'.
 
@@ -84,7 +86,7 @@ That will create a file called 'clonereport.rcf' which contains all the clones d
 ```
 ../rcfviewer-0.2/rcfviewer.sh
 ```
-If that displays an empty interface, it means the rcfviewer is working and you can skip to the next paragraph. If you get any errors, it is probably because the runner copied the wrong library. Open the `rcfviewer-0.2` folder in your file explorer, and look inside the folder `jar/swt`. Order the files by date, and pick the most current version for your operating system and hardware. Copy the `swt-<os-hardware>.jar` file to the `jar` folder and rename it as `swt.jar`. Try running rcfviewer again from the command line. If it does not work, try copying a different library.
+If that displays an empty interface, it means the rcfviewer is working and you can skip to the next paragraph. If you get any errors, it is probably because the runner copied the wrong library. Open the `rcfviewer-0.2` folder in your file explorer, and look inside the folder `jar/swt`. Order the files by date, and pick the most current version for your operating system and hardware. Copy the `swt-<os-hardware>.jar` file to the `jar` folder and rename it as `swt.jar`. Try running rcfviewer again from the command line. If it does not work, try copying a different library. **If your rcfviewer is not opening, re-read this paragraph and follow the instructions here very carefully**.
 
 Now that rcfviewer works, let's ask it to display our clone report. Make sure you are still on the freemercator as your current folder and type in the terminal/prompt:
 ```
